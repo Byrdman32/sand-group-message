@@ -1,0 +1,19 @@
+.bg-image {
+    background: url("../img/aerial.png") no-repeat bottom right;
+}
+
+.s013 {
+    background-color: rgba(255,255,255,0.5);
+}
+
+.s013 form fieldset legend {
+    color: #34443e;
+}
+
+.s013 form .btn-search {
+    background: #509E2F;
+}
+
+.s013 form .btn-search:hover {
+    background: #007A33;
+}
