@@ -51,6 +51,7 @@ function searchData() {
 
                 document.getElementById("results-wrap").style.overflowY = "scroll";
             }
+
         } else {
 
             let container = document.createElement("div");
@@ -120,5 +121,16 @@ $(function() {
             first.remove();
             first = e.firstElementChild;
         }
+    });
+
+    $('#close-alert').click(function() {
+        let e = document.getElementById("alert");
+        let first = e.firstElementChild;
+        while (first) {
+            first.remove();
+            first = e.firstElementChild;
+        }
+
+        e.remove();
     });
 });
