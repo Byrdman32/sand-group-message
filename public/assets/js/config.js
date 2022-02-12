@@ -6,7 +6,7 @@ const firebaseConfig = {
     messagingSenderId: "920916963210",
     appId: "1:920916963210:web:4dc93fab242f54654fe273",
     measurementId: "G-XY80X3DEJ2",
-    databaseURL: "https://troop59-e264b-default-rtdb.firebaseio.com/"
+    databaseURL: "https://missouri-sandt-class-list-default-rtdb.firebaseio.com/"
 };
 
 export {firebaseConfig};
