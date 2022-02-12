@@ -1,0 +1,7 @@
+#form {
+    display: flex;
+}
+
+#results {
+    display: none;
+}
