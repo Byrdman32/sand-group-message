@@ -5,7 +5,7 @@
 
 .s013 {
     background-color: rgba(255,255,255,0.5);
-    min-height: calc(100vh - 50px);
+    height: 100vh;
 }
 
 .s013 form fieldset legend {
@@ -74,12 +74,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-footer {
-    background-color: rgba(255,255,255,0.5);
-    min-height: 50px;
-    text-align: center;
-}
-
 .results-wrap {
     background: #fff;
     min-height: 80px;
@@ -131,4 +125,9 @@ footer {
 
 .col-4 :first-child {
     margin-bottom: 10px;
+}
+
+.alert {
+    position: absolute;
+    top: 15px;
 }
