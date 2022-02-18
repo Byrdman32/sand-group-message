@@ -16,7 +16,14 @@ function searchData() {
     department = document.getElementById("department-name").value;
     departmentFull = document.getElementById("department-name").innerText;
 
-    get(child(dbRef, `groups/${department}/${courseNumber}`)).then((snapshot) => {
+    let ref = ``;
+    if (department === "Campus") {
+        ref = `groups/${department}/0`;
+    } else {
+        ref = `groups/${department}/${courseNumber}`;
+    }
+
+    get(child(dbRef, ref)).then((snapshot) => {
         let results = document.getElementById("results-field");
 
         if (snapshot.exists() && courseNumber > 0) {
@@ -51,7 +58,33 @@ function searchData() {
 
                 document.getElementById("results-wrap").style.overflowY = "scroll";
             }
+        } else if (snapshot.exists() && department === "Campus") {
+            let items = snapshot.val();
 
+            for (let i = 0; i < items.length; i++) {
+                let container = document.createElement("div");
+                container.classList.add("container");
+                results.appendChild(container);
+
+                let name = document.createElement("p");
+                name.innerText = departmentFull + " | " + items[i].name;
+                container.appendChild(name);
+
+                let row = document.createElement("div");
+                row.classList.add("row");
+                container.appendChild(row);
+
+                let col_12 = document.createElement("div");
+                col_12.classList.add("col-12");
+                row.appendChild(col_12);
+
+                let link = document.createElement("a");
+                link.href = items[i].link;
+                link.innerText = items[i].link;
+                col_12.appendChild(link);
+
+                document.getElementById("results-wrap").style.overflowY = "scroll";
+            }
         } else {
 
             let container = document.createElement("div");
