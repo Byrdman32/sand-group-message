@@ -71,3 +71,6 @@ node_modules/
 # Data JSON Files
 data.json
 data2.json
+
+# Old Public
+old-public/
