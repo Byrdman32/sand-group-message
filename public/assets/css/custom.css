@@ -24,3 +24,74 @@ h1 {
 .label {
     user-select: none;
 }
+
+.results {
+    float: right;
+}
+
+i.fa {
+    display: inline-block;
+    border-radius: 60px;
+    box-shadow: 0 0 2px #888;
+    padding: 0.5em 0.6em;
+    float: right;
+    margin-right: 7px;
+}
+
+.container {
+    user-select: none;
+}
+
+.container p {
+    font-size: 20px;
+}
+
+.col-2 {
+    font-size: 14px;
+}
+
+.col-8 {
+    font-size: 14px;
+}
+
+.icons {
+    margin-top: calc((51px / 3) * -1);
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+#results-header {
+    cursor: default;
+    user-select: none;
+}
+
+#exit-header {
+    cursor: pointer;
+}
+
+.results-content > .tab-pane {
+    display: none;
+    padding: 38px 55px 45px;
+}
+
+.results-content > .tab-pane.active {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .results-content > .tab-pane {
+        padding: 30px 30px 45px;
+    }
+}
+
+.container {
+    margin: 15px;
+    padding: 0;
+}
+
+hr.rounded {
+    border-top: 2px solid #bbb;
+    border-radius: 5px;
+}

@@ -28,5 +28,7 @@ for (let i = 0; i < count; i++) {
 
         document.getElementById('courseID').value = "";
         document.getElementById('info').innerText = "...";
+
+        window.location.replace('./results.html');
     });
 }

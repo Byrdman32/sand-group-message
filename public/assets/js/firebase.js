@@ -14,11 +14,11 @@ function searchData() {
     }
 
     get(child(dbRef, ref)).then((snapshot) => {
-        // let results = document.getElementById("results-field");
+        let results = document.getElementById("results-data");
 
         if (snapshot.exists() && courseNum > 0) {
             console.log("Search for Course");
-            /*
+
             let items = snapshot.val();
 
             for (let i = 0; i < items.length; i++) {
@@ -27,7 +27,7 @@ function searchData() {
                 results.appendChild(container);
 
                 let name = document.createElement("p");
-                name.innerText = departmentName + " " + courseNum + " | " + items[i].name;
+                name.innerText = departmentFull + " " + courseNumber + " | " + items[i].name;
                 container.appendChild(name);
 
                 let row = document.createElement("div");
@@ -46,15 +46,14 @@ function searchData() {
                 let link = document.createElement("a");
                 link.href = items[i].link;
                 link.innerText = items[i].link;
+                links.push(items[i].link);
                 col_10.appendChild(link);
 
                 document.getElementById("results-wrap").style.overflowY = "scroll";
             }
-            */
         }
         else if (snapshot.exists() && submit === 1) {
             console.log("Search for Campus");
-            /*
             let items = snapshot.val();
 
             for (let i = 0; i < items.length; i++) {
@@ -63,7 +62,7 @@ function searchData() {
                 results.appendChild(container);
 
                 let name = document.createElement("p");
-                name.innerText = departmentName + " | " + items[i].name;
+                name.innerText = departmentFull + " | " + items[i].name;
                 container.appendChild(name);
 
                 let row = document.createElement("div");
@@ -77,15 +76,14 @@ function searchData() {
                 let link = document.createElement("a");
                 link.href = items[i].link;
                 link.innerText = items[i].link;
+                links.push(items[i].link);
                 col_12.appendChild(link);
 
                 document.getElementById("results-wrap").style.overflowY = "scroll";
             }
-            */
         }
         else {
             console.log("Not Found");
-            /*
             let container = document.createElement("div");
             container.classList.add("container");
             results.appendChild(container);
@@ -123,7 +121,6 @@ function searchData() {
             col_4.appendChild(login);
 
             document.getElementById("results-wrap").style.overflowY = "hidden";
-            */
         }
     }).catch((error) => {
         console.error(error);
