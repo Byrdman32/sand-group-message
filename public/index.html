@@ -1,113 +1,199 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="author" content="colorlib.com">
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colrolib Templates">
+    <meta name="author" content="Colrolib">
+    <meta name="keywords" content="Colrolib Templates">
 
-  <title>S&T GroupMe Search</title>
+    <!-- Title Page-->
+    <title>Search | S&T GroupMe</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link href="assets/css/main.css" rel="stylesheet" />
-  <link href="assets/css/custom.css" rel="stylesheet" />
-  <link href="assets/css/hidden.css" rel="stylesheet" />
+    <!-- Icons font CSS-->
+    <link href="./assets/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="./assets/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="./assets/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="./assets/css/main.css" rel="stylesheet" media="all">
+    <link href="./assets/css/custom.css" rel="stylesheet" media="all">
 </head>
+
 <body>
-  <div class="bg-image">
-    <div class="s013">
-
-      <div id="alert" class="alert alert-success" role="alert">
-        <button id="close-alert" type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h4 class="alert-heading">Attention!</h4>
-        <p>This website is still under construction. However, it is usable there are just courses that have not been added yet. There also might be some components that have not been activated yet. <br><br>Thank you for your understanding. </p>
-        <hr>
-        <p class="mb-0">Please note that this site is not hosted or maintained by the Missouri University of Science and Technology. It was created as a personal project to make the finding of groups easier.</p>
-      </div>
-
-      <form>
-        <fieldset>
-          <legend>Missouri S&T Class GroupMe/Discord Search</legend>
-        </fieldset>
-        <button id="btn-new" class="btn-new" type="button">New Search</button>
-        <div id="form" class="inner-form">
-          <div class="left">
-            <div class="input-wrap first">
-              <div class="input-field first">
-                <label>Course Number</label>
-                <input id="courseNum" type="text" placeholder="ex: 1200, 1113, 1310" />
-              </div>
-            </div>
-            <div class="input-wrap second">
-              <div class="input-field second">
-                <label>Department</label>
-                <div class="input-select">
-                  <select id="department-name" data-trigger="" name="choices-single-default">
-                    <option id="default-value" value="0" placeholder="">...</option>
-                    <option value="Campus">Campus/Social</option>
-                    <option value="MechEng">Mechanical Engineering</option>
-                    <option value="AeroEng">Aerospace Engineering</option>
-                    <option value="CivEng">Civil Engineering</option>
-                    <option value="ArchEng">Architectural Engineering</option>
-                    <option value="EnvEng">Environmental Engineering</option>
-                    <option value="CompSci">Computer Science</option>
-                    <option value="EE">Electrical Engineering</option>
-                    <option value="CompEng">Computer Engineering</option>
-                    <option value="NucEng">Nuclear Engineering</option>
-                    <option value="GeoEng">Geological Engineering</option>
-                    <option value="CerEng">Ceramic Engineering</option>
-                    <option value="MM">Metallurgy/Materials</option>
-                    <option value="PetEng">Petroleum Engineering</option>
-                    <option value="EngMang">Engineering Management</option>
-                    <option value="Math">Mathematics/Statistics</option>
-                    <option value="Phys">Physics</option>
-                    <option value="FLang">Foreign Languages</option>
-                    <option value="Econ">Economics</option>
-                    <option value="Hist">History</option>
-                    <option value="Music">Music</option>
-                    <option value="PoliSci">Political Science</option>
-                    <option value="Psyc">Psychology</option>
-                    <option value="English">English</option>
-                    <option value="Human">Humanities Misc.</option>
-                    <option value="ChemEng">Chemical Engineering</option>
-                    <option value="Chem">Chemistry</option>
-                    <option value="Bio">Biology</option>
-                    <option value="MineEng">Mining Engineering</option>
-                    <option value="Bus">Business</option>
-                    <option value="InfoTech">Information Technology</option>
-                    <option value="ExpEng">Explosives Engineering</option>
-                  </select>
+    <div class="bg-img">
+        <div class="page-wrapper bg-color-1 p-t-165 p-b-100">
+            <h1>Missouri S&T GroupMe & Discord List</h1>
+            <div class="wrapper wrapper--w680">
+                <div class="card card-2">
+                    <div class="card-body">
+                        <ul class="tab-list">
+                            <li id="header1" class="tab-list__item active">
+                                <a class="tab-list__link" href="#tab1" data-toggle="tab">courses</a>
+                            </li>
+                            <li id="header2" class="tab-list__item">
+                                <a class="tab-list__link" href="#tab2" data-toggle="tab">campus groups</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab1">
+                                <form method="POST" action="#">
+                                    <div class="input-group">
+                                        <label class="label">department:</label>
+                                        <div class="input-group-icon" id="js-select-special">
+                                            <p class="input--style-1" type="text" id="info">...</p>
+                                            <i class="zmdi zmdi-chevron-down input-icon"></i>
+                                        </div>
+                                        <div class="dropdown-select">
+                                            <ul class="list-room">
+                                                <li class="list-room__item">
+                                                    <ul class="list-person" id="departments">
+                                                        <li class="list-person__item" id="0">
+                                                            <span class="name" id="MechEng">Mechanical Engineering</span>
+                                                        </li>
+                                                        <li class="list-person__item" id="1">
+                                                            <span class="name" id="AeroEng">Aerospace Engineering</span>
+                                                        </li>
+                                                        <li class="list-person__item" id="2">
+                                                            <span class="name" id="CivEng">Civil Engineering</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="ArchEng">Architectural Engineering</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="EnvEng">Environmental Engineering</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="CompSci">Computer Science</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="EE">Electrical Engineering</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="CompEng">Computer Engineering</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="NucEng">Nuclear Engineering</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="GeoEng">Geological Engineering</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="CerEng">Ceramic Engineering</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="MM">Metallurgy/Materials</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="PetEng">Petroleum Engineering</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="EngMang">Engineering Management</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="Math">Mathematics/Statistics</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="Phys">Physics</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="FLang">Foreign Languages</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="Econ">Economics</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="Hist">History</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="Music">Music</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="PoliSci">Political Science</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="Psyc">Psychology</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="English">English</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="Human">Humanities Misc.</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="ChemEng">Chemical Engineering</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="Chem">Chemistry</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="Bio">Biology</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="MineEng">Mining Engineering</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="Bus">Business</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="InfoTech">Information Technology</span>
+                                                        </li>
+                                                        <li class="list-person__item">
+                                                            <span class="name" id="ExpEng">Explosives Engineering</span>
+                                                        </li>
+<!--                                                        <li class="list-person__item">-->
+<!--                                                            < span class="name">Children</span>-->
+<!--                                                            <div class="quantity quantity2">-->
+<!--                                                                <span class="plus">✓</span>-->
+<!--                                                            </div>-->
+<!--                                                        </li>-->
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="label">course num:</label>
+                                        <input id="courseID" class="input--style-1" type="text" name="courseNum" placeholder="ex: 1200, 1113, 1310">
+                                    </div>
+                                    <button class="btn-submit" type="button">search</button>
+                                </form>
+                            </div>
+                            <div class="tab-pane" id="tab2">
+                                <button class="btn-submit" type="button">search</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <button id="search" class="btn-search" type="button" >SEARCH</button>
         </div>
-        <div id="results" class="inner-form">
-          <div id="results-wrap" class="results-wrap first">
-            <div id="results-field" class="results-field first">
-            </div>
-          </div>
-        </div>
-      </form>
     </div>
-  </div>
-  <script type="module" src="assets/js/search.js"></script>
-  <script type="module" src="assets/js/main.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 
+    <!-- Jquery JS-->
+    <script src="./assets/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="./assets/vendor/select2/select2.min.js"></script>
+    <script src="./assets/vendor/jquery-validate/jquery.validate.min.js"></script>
+    <script src="./assets/vendor/bootstrap-wizard/bootstrap.min.js"></script>
+    <script src="./assets/vendor/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
 
-  <script src="assets/js/extention/choices.js"></script>
-  <script>
-    const choices = new Choices('[data-trigger]',
-            {
-              searchEnabled: false,
-              itemSelectText: '',
-            });
-
-  </script>
+    <!-- Main JS-->
+    <script src="./assets/js/global.js"></script>
+    <script src="assets/js/utilities.js"></script>
+    <script type="module" src="assets/js/firebase.js"></script>
 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
 </html>
+<!-- end document-->
